@@ -1,4 +1,4 @@
-import {Activity,ArrowUpRight,RotateCcw,ShieldCheck,Zap} from 'lucide-react';
+import {ArrowUpRight,RotateCcw,ShieldCheck,Zap} from 'lucide-react';
 import type {Policy} from '../lib/types';
 interface Props{policy:Policy;online:boolean;busy:boolean;onBurst:()=>void;onReset:()=>void}
 export function GatewayHeader({policy,online,busy,onBurst,onReset}:Props){return <header className="topbar">
