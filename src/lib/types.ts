@@ -1,0 +1,4 @@
+export interface Policy {rpm:number;tpm:number;fallback:'none'|'backup'}
+export interface AuditEvent {id:string;at:number;key:string;status:200|429|400;tokens:number;model:string;message:string}
+export interface Telemetry {status:string;generatedAt:string;uptimeSeconds:number;metrics:{allowed:number;blocked:number;total:number;requestsLastMinute:number;activeKeys:number;tokensLastMinute:number;totalTokens:number};policy:Policy;upstream:{primary:string;healthy:boolean;backup:string;fallbackEnabled:boolean};audit:AuditEvent[];storage:string}
+export interface ProxyResult {status:number;body:Record<string,unknown>;headers:Record<string,string>}
